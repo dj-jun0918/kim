@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>웹페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <style>
+        .container
+        {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        div.container2
+        {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+        }
+        .nav
+        {
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        .top_bar
+        {
+            background-color: white;
+            position: fixed;
+            left: 0; top: 0; right: 0; height: 50px;
+        }
+        .item1
+        {
+            float: left;
+            font-size: 20px;
+            font-weight: 600;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        .item2
+        {
+            display: flex;
+            margin-left:auto;
+            margin-right: 10px;
+        }
+        .item3
+        {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        body
+        {
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        a
+        {
+            color: black;
+            text-decoration-line: none;
+        }
+       img 
+        {
+            float: left; width: 100%;
+        }
+        video
+        {
+            float: initial; max-width: 60%;
+        }
+        .homeSection1
+        {
+            width: 100%;
+            max-width: 30%;
+            position: relative;
+            padding-right: 20px;
+        }
+        .homeSection2
+        {
+            width: 100%;
+            max-width: 64%;
+            position: relative;
+            padding-left: 20px;
+            padding-right: 20px;
+            float: right;
+        }
+        #menuButton {
+            display: none;
+            margin-left: auto;
+            margin-right: 0px;
+            float: right;
+        }
+        .nav .item2 {
+            display: flex;
+        }
+        @media screen and (max-width: 900px) {
+            #menuButton {
+                display: block;
+            }
+
+            .nav .item2 {
+                display: none;
+            }
+
+            .nav.active .item2 {
+                display: flex;
+                flex-direction: column;
+                height: 10px;
+            }
+            .div .homeSection2{
+                float: left;
+                position: relative;
+            }
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            menuButton = document.getElementById('menuButton');
+            nav = document.querySelector('.nav');
+
+            menuButton.addEventListener('click', function() {
+                nav.classList.toggle('active');
+
+            });
+            $('#menuHome').show();
+            $('#INTRO').hide();
+            $('#SUB').hide();
+
+            $('a[href="#HOME"]').click(function() {
+                $('#menuHome').show();
+                $('#INTRO').hide();
+                $('#SUB').hide();
+            });
+
+            $('a[href="#INTRO"]').click(function() {
+                $('#menuHome').hide();
+                $('#INTRO').show();
+                $('#SUB').hide();
+            });
+
+            $('a[href="#SUB"]').click(function() {
+                $('#menuHome').hide();
+                $('#INTRO').hide();
+                $('#SUB').show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        
+        <div class="nav top_bar container">
+            <a class="item1" href>DongJun Kim</a>
+            <button id="menuButton">Menu</button>
+            <div class="item2">
+                <a href="#HOME"><h5 class="item3">HOME</h5></a>
+                <a href="#INTRO"><h5 class="item3">HISTORY</h5></a>
+                <a href="#SUB"><h5 class="item3">SUB</h5></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container2">
+        <section id="menuHome">
+            <div class="homeSection1">
+                <img src="../../../잡/김동준.jpg">
+            </div>
+            <div class="homeSection2">
+                <h2>Introduce</h2>
+                <br>
+                <h4>Age: 23</h4>
+                <h4>Height: 181cm</h4>
+                <h4>weight: 75kg</h4>
+                <p>Hello. My name is DongJun Kim. I am in the second year of Kangwon National University.
+                    And I am majoring in computer engineering. Let me tell you a little bit about me, 
+                    my hobby is playing games and watching dramas or moives. 
+                    And I love listening to ballads. Especially, I like singers such as Jung Seung-hwan, Jukjae, and 10cm.
+                    Especially, I like Jung Seung-hwan so much that I went to a concert through COVID-19 in 2021. 
+                    The video taken at the concert will be shown on the SUB page.
+                    And these days, I'm into Carder Garden songs. This is the end of my brief introduction,
+                    and I will explain my life in more detail on the HISTORY page.</p>
+            </div>
+        </section>
+        <section id="INTRO">
+            <br>
+            <h2>2002</h2>
+            <p>Born in Jeonju Severance Hospital on September 18th</p>
+            <br>
+            <h2>2003</h2>
+            <p>Moving to Chungju</p>
+            <br>
+            <h2>2009~2014</h2>
+            <p>Entering to Kukwon Elementary School</p>
+            <p>When I was in 5th grade, I ran for the first and last class president election and unfortunately, I was elected vice president.</p>
+            <br>
+            <h2>2015~2017</h2>
+            <p>Entering Choongil Middle School</p>
+            <br>
+            <h2>2018~2020</h2>
+            <p>Entering Daewon High School</p>
+            <br>
+            <h2>2021</h2>
+            <p>Entered Kangwon National University with Computer Engineering</p>
+            <p>But because of COVID-19, I lost my first year</p>
+            <h2>2022.03~2023.09</h2>
+            <p>대한민국 육군 병장 만기전역</p>
+            <p>Bad back and knee health after serving 1 year and 6 months as an ammunition management officer</p>
+            <h2>2024</h2>
+            <p>Currently, I am a second-year computer engineering student at Kangwon National University</p>
+        </section>
+        <section id="SUB">
+            <br>
+            <h3>1.mbti</h3>
+            <div>
+                <img src="../../../잡/김동준mbti.png">
+                
+            </div>
+            <br>
+            <div>
+                <h3>2.ARMY</h3>
+                <div class="homeSection1">
+                    <img src="../../../잡/동해안군수지원단.png">
+                    <img src="../../../잡/KakaoTalk_20240527_213751165.jpg">
+                    <p>(A picture with my same period)</p>
+                    <br>
+                </div>
+            </div>
+            <div>
+                <h3>3.Chungju</h3>
+                <div>
+                    <p>It is Kim Dongjun's hometown and a city similar in size to Chuncheon.</p>
+                    <p>Chungju Dam, Chungju Apple, and Kim Sun-tae are famous in Chungju. 
+                        (a.k.a. Chungju City Public Relations Man).</p>
+                </div>
+                <div class="homeSection1">
+                    <img src="../../../잡/김선태씨.png">
+                    <p><a href="https://www.youtube.com/@Chungjusi">https://www.youtube.com/@Chungjusi</a></p>
+                    <p>It's Chungju Man's YouTube channel.</p>
+                </div>
+            </div>
+            <div>
+                <h3>4.Jung Seung Hwan's concert</h3>
+                <video controls="controls">
+                    <source src="../../../잡/KakaoTalk_20240527_222842445.mp4" type= "video/mp4">
+                </video>
+                <p>Kim Dongjun's first and last concert, I was able to have really good memories and became a big fan.</p>
+                <p>Although Jung Seung-hwan is protecting our country now
+                    If I have a concert again one day, I will definitely go.
+                </p>
+            </div>
+        </section>
+        </div>
+    </main>
+</body>
+</html>
